@@ -166,10 +166,10 @@ def trainer(trainloader, validloader, device, optimizer, model, criterion, epoch
                 with torch.no_grad():
                     valid_loss, accuracy = validation(model, validloader, criterion, device)
 
-                print( "Epoch: {}/{} | ".format(epoch+1, epochs),
-                      "Train loss: {:.4f} | ".format(running_loss / print_every),
-                      "Valid loss: {:.4f} | ".format(valid_loss / len(validloader)),
-                      "Valid accuracy: {:.4f} | ".format(accuracy / len(validloader)) )
+                print( "Epoch: {}/{} | ".format(epoch+1, epochs), \
+                    "Train loss: {:.4f} | ".format(running_loss / print_every), \
+                        "Valid loss: {:.4f} | ".format(valid_loss / len(validloader)), \
+                            "Valid accuracy: {:.4f} | ".format(accuracy / len(validloader)) )
             
             running_loss = 0
             model.train()
